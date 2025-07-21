@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Détails du produit</h1>
+<p>ID :<span th:text="${product.id}"></span></p>
+<p>Nom :<span th:text="${product.name}"></span></p>
+<p>Catégorie : <span th:text="${product.category}"></span></p>
+<p>Prix : <span th:text="${product.maxPrice} + ' €'"></span></p>
+</body>
+</html>

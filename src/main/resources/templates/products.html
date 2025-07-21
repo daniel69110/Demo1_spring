@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 th:text="${isFilter} ? 'Produits filtrés' : 'Tous les produits'"></h1>
+<ul>
+    <li th:each="product : ${products}">
+        <a th:href="@{'/products/product'(id=${product.id})}" th:text="${product.name}"></a>
+        - <span th:text="${product.category}"></span>
+        - <span th:text="${product.maxPrice} + ' €'"></span>
+    </li>
+</ul>
+</body>
+</html>
